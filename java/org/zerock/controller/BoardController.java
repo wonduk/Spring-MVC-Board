@@ -40,7 +40,7 @@ public class BoardController {
 	
 	
 	//목록 with paging
-	@GetMapping("/list")
+	@GetMapping({"/list","/"})
 	public void list(Criteria cri, Model model) {		
 		 model.addAttribute("list", service.getList(cri));
 		 //전체 글의 갯수
