@@ -54,7 +54,7 @@
     		<!-- 글쓰기화면 -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Board</h1>
+                    <h1 class="page-header">작성화면</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -63,30 +63,30 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Register
+                            글쓰기
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <form role="form" action="/board/register" method="post">
 					          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					          <div class="form-group">
-					            <label>Title</label> <input class="form-control" name='title'>
+					            <label>제목</label> <input class="form-control" name='title'>
 					          </div>
 					
 					          <div class="form-group">
-					            <label>Content</label>
+					            <label>내용</label>
 					            <textarea class="form-control" rows="3" name='content'></textarea>
 					          </div>
 					
 					          <div class="form-group">
-					            <label>Writer</label> <input class="form-control" name='writer' value='<sec:authentication property="principal.username"/>' readonly="readonly">
+					            <label>작성자</label> <input class="form-control" name='writer' value='<sec:authentication property="principal.username"/>' readonly="readonly">
 					          </div>
 					          <!-- 첨부파일 -->
 				            <div class="row">
 							  <div class="col-lg-12">
 							    <div class="panel panel-default">
 							
-							      <div class="panel-heading">File Attach</div>
+							      <div class="panel-heading">첨부파일</div>
 							      <!-- /.panel-heading -->
 							      <div class="panel-body">
 							        <div class="form-group uploadDiv">
@@ -109,8 +109,8 @@
 							
 								<!-- 저장,리셋버튼 -->
 						        <div class="ta-r">
-						         <button type="submit" class="btn btn-success">Submit Button</button>
-						         <button type="reset" class="btn btn-default">Reset Button</button>
+						         <button type="submit" class="btn btn-success">저장하기</button>
+						         <button type="reset" class="btn btn-default">초기화</button>
 						        </div>
 								<!-- /.저장,리셋버튼 -->
 					        </form>
